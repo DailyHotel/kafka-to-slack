@@ -1,2 +1,3 @@
 # kafka-to-slack
-Kafka 이벤트를 Slack에 전달한다
+
+Send Kafka events to Slack using Fluentd 
