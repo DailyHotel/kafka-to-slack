@@ -11,7 +11,7 @@ RUN buildDeps="sudo make gcc g++ libc-dev ruby-dev" \
  && apt-get install -y --no-install-recommends $buildDeps \
  && gem install --no-rdoc --no-ri \
   fluent-plugin-slack \
-  fluent-plugin-kafka \
+  fluent-plugin-kafka:0.7.9 \
   fluent-plugin-flatten-hash \
  && gem sources --clear-all \
   && SUDO_FORCE_REMOVE=yes \
@@ -20,5 +20,3 @@ RUN buildDeps="sudo make gcc g++ libc-dev ruby-dev" \
                    $buildDeps \
   && rm -rf /var/lib/apt/lists/* \
             /root/.gem/ruby/2.3.0/cache/*.gem
-
-
